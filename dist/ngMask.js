@@ -109,9 +109,11 @@
                       }
 
                       var wrongPosition = maskService.getFirstWrongPosition(viewValueWithDivisors);
+                      /* this code causes safari bugs
                       if (angular.isDefined(wrongPosition)) {
                         setSelectionRange(wrongPosition);
                       }
+                      */
                     } else if (options.restrict === 'reject' && !validCurrentPosition) {
                       viewValue = maskService.removeWrongPositions(viewValueWithDivisors);
                       viewValueWithDivisors = viewValue.withDivisors(true);
